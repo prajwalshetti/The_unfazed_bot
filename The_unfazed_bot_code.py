@@ -37,7 +37,7 @@ async def thanks(ctx, member: discord.Member):
         thank_points[member.id] += 1
 
 @bot.command()
-async def thank_leaderboard(ctx):
+async def thanks_leaderboard(ctx):
     embed = discord.Embed(
         title="Thank Leaderboard",
         color=discord.Color.blue()
@@ -56,9 +56,10 @@ async def menu(ctx):
     menu_message = (
         "**Choose a command:**\n"
         "- `!thanks @mention`: Thank a user.\n"
-        "- `!thank_leaderboard`: Display the thank leaderboard.\n"
+        "- `!thanks_leaderboard`: Display the thank leaderboard.\n"
         "- `!kick @mention`: Kick a user from the server.\n"
-        "- `!mute @mention duration`: Mute a user for a specified duration (in minutes)."
+        "- `!mute @mention duration`: Mute a user for a specified duration (in minutes).\n"
+        "- `!count_reactions message_link`: Get the number of responses."
     )
     await ctx.send(menu_message)
 
